@@ -1,0 +1,14 @@
+resources:
+  pipelines:
+    dltpipeline:
+      name: dltpipeline
+      libraries:
+        - file:
+            path: ../../src/pipelines/dltpipeline/transformations/transformation.py
+      catalog: ${var.catalog}
+      target: ${var.schema}
+      serverless: true
+      continuous: false
+      development: false
+      photon: true
+      channel: CURRENT
